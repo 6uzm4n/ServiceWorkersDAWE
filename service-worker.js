@@ -19,7 +19,6 @@ function createCacheBustedRequest(url) {
   bustedUrl.search += (bustedUrl.search ? '&' : '') + 'cachebust=' + Date.now();
   return new Request(bustedUrl);
 }
-console.log("BBB");
 this.addEventListener('install', event => {
   event.waitUntil(
     caches.open(currentCache.offline).then(function(cache) {
